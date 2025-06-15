@@ -1,0 +1,111 @@
+
+
+
+/* Cookie Popup Styles */
+.cookie-popup {
+    min-width: 30rem;
+    width: 40vw;
+    position: fixed;
+    bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(250, 250, 245, 1);
+    padding: var(--padding-l);
+    border: 1px solid var(--theme-color-10);
+    border-radius: var(--border-radius-l);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+
+[data-theme="dark"] .cookie-popup {
+    background-color: var(--theme-color-05);
+}
+
+.cookie-popup.hidden {
+    display: none;
+}
+
+.cookie-popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+}
+
+.cookie-popup-buttons {
+    display: flex;
+    gap: var(--gap-m);
+}
+
+.cookie-popup-buttons .btn {
+    padding: var(--padding-s) var(--padding-m);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius-m);
+    transition: background-color 0.3s;
+}
+
+.cookie-popup-buttons .accept {
+    background-color: rgb(24, 24, 24);
+    color: rgb(240, 240, 235);
+}
+
+[data-theme="dark"] .cookie-popup-buttons .accept {
+    background-color: rgb(240, 240, 240);
+    color: rgb(24, 24, 24);
+}
+
+.cookie-popup-buttons .accept:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+[data-theme="dark"] .cookie-popup-buttons .accept:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.cookie-popup-buttons .decline {
+    background-color: rgb(230, 230, 230);
+    color: rgb(118, 118, 118);
+}
+
+[data-theme="dark"] .cookie-popup-buttons .decline {
+    background-color: rgb(44, 48, 56);
+    color: rgb(118, 118, 118);
+}
+
+.cookie-popup-buttons .decline:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+[data-theme="dark"] .cookie-popup-buttons .decline:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+@media screen and (orientation: portrait) {
+    .cookie-popup {
+        min-width: 0rem;
+        width: 90vw;
+        padding: var(--padding-m);
+    }
+
+    .cookie-popup-content {
+        width: 100%;
+        gap: var(--gap-m);
+    }
+
+    .cookie-popup-buttons {
+        width: 100%;
+        display: flex;
+        gap: var(--gap-m);
+    }
+
+    .cookie-popup-buttons .btn {
+        flex: 1;
+        padding: var(--padding-m);
+        cursor: pointer;
+        border: none;
+        border-radius: var(--border-radius-m);
+        transition: background-color 0.3s;
+    }
+}
