@@ -1,0 +1,276 @@
+/* Default light theme */
+:root {
+    --theme-color-bg: rgb(250, 250, 245);
+    --theme-color-project: rgba(250, 250, 245, 1);
+    --theme-color-project-hover: rgba(255, 255, 250, 1);
+    --theme-color-project-soon: rgba(0, 0, 0, 0.05);
+    --theme-color-project-beta: rgba(255, 255, 250, 0.5);
+    --theme-color-r: 0;
+    --theme-color-g: 0;
+    --theme-color-b: 0;
+    --theme-color-r-l: 255;
+    --theme-color-g-l: 255;
+    --theme-color-b-l: 250;
+    --theme-color-r-d: 0;
+    --theme-color-g-d: 0;
+    --theme-color-b-d: 0;
+
+    --theme-color-100: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-100));
+    --theme-color-90: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-90));
+    --theme-color-80: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-80));
+    --theme-color-70: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-70));
+    --theme-color-60: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-60));
+    --theme-color-50: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-50));
+    --theme-color-40: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-40));
+    --theme-color-30: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-30));
+    --theme-color-20: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-20));
+    --theme-color-10: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-10));
+    --theme-color-05: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-05));
+    --theme-color-00: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-00));
+
+    --theme-color-l-100: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-100));
+    --theme-color-l-90: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-90));
+    --theme-color-l-80: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-80));
+    --theme-color-l-70: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-70));
+    --theme-color-l-60: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-60));
+    --theme-color-l-50: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-50));
+    --theme-color-l-40: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-40));
+    --theme-color-l-30: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-30));
+    --theme-color-l-20: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-20));
+    --theme-color-l-10: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-10));
+    --theme-color-l-05: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-05));
+    --theme-color-l-00: rgba(var(--theme-color-r-l), var(--theme-color-g-l), var(--theme-color-b-l), var(--opacity-00));
+
+    --theme-color-d-100: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-100));
+    --theme-color-d-90: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-90));
+    --theme-color-d-80: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-80));
+    --theme-color-d-70: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-70));
+    --theme-color-d-60: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-60));
+    --theme-color-d-50: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-50));
+    --theme-color-d-40: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-40));
+    --theme-color-d-30: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-30));
+    --theme-color-d-20: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-20));
+    --theme-color-d-10: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-10));
+    --theme-color-d-05: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-05));
+    --theme-color-d-00: rgba(var(--theme-color-r-d), var(--theme-color-g-d), var(--theme-color-b-d), var(--opacity-00));
+
+    --color-code-keyword-100: rgba(179, 128, 192, 1);
+    --color-code-constant-100: rgba(0, 0, 0, 0.75);
+    --color-code-boolean-100: rgba(128, 192, 128, 1);
+    --color-code-operator-100: rgba(128, 128, 192, 1);
+    --color-code-punctuation-100: rgba(0, 0, 0, 0.75);
+    --color-code-comment-100: rgba(0, 0, 0, 0.5);
+
+    --opacity-100: 1;
+    --opacity-90: 0.9;
+    --opacity-80: 0.8;
+    --opacity-70: 0.7;
+    --opacity-60: 0.6;
+    --opacity-50: 0.5;
+    --opacity-40: 0.4;
+    --opacity-30: 0.3;
+    --opacity-20: 0.2;
+    --opacity-10: 0.1;
+    --opacity-05: 0.05;
+    --opacity-00: 0.00;
+
+    --gap-0: 0rem;
+    --gap-s: 0.25rem;
+    --gap-m: 0.5rem;
+    --gap-l: 1rem;
+    --gap-xl: 1.5rem;
+    --gap-xxl: 2rem;
+
+    --padding-0: 0rem;
+    --padding-s: 0.25rem;
+    --padding-m: 0.5rem;
+    --padding-l: 1rem;
+    --padding-xl: 1.5rem;
+    --padding-xxl: 2rem;
+
+    --border-radius-s: 0.25rem;
+    --border-radius-m: 0.5rem;
+    --border-radius-l: 1rem;
+    --border-radius-xl: 1.5rem;
+    --border-radius-xxl: 2rem;
+    --border-radius-xxxl: 2.5rem;
+    --border-radius-xxxxl: 3rem;
+    --border-radius-xxxxxl: 4rem;
+
+    --font-size-s: 0.25rem;
+    --font-size-m: 0.5rem;
+    --font-size-l: 1rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xxxl: 2.5rem;
+    --font-size-xxxxl: 3rem;
+    --font-size-xxxxxl: 4rem;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --theme-color-bg: rgba(10, 10, 10, 1);
+    --theme-color-r: 255;
+    --theme-color-g: 255;
+    --theme-color-b: 250;
+
+    --color-code-keyword-100: rgba(179, 128, 192, 1);
+    --color-code-constant-100: rgba(255, 255, 255, 0.75);
+    --color-code-boolean-100: rgba(128, 192, 128, 1);
+    --color-code-operator-100: rgba(128, 128, 192, 1);
+    --color-code-punctuation-100: rgba(255, 255, 255, 0.75);
+    --color-code-comment-100: rgba(255, 255, 255, 0.5);
+}
+
+@font-face {
+    font-family: 'Gambarino-Regular';
+    src: url('/fonts/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.eot') format('eot'),
+        url('/fonts/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.ttf') format('truetype'),
+        url('/fonts/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff') format('woff'),
+        url('/fonts/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
+        url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff'),
+        url('/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.h_line {
+    min-width: 30rem;
+    width: 40vw;
+    border-top: 1px solid var(--theme-color-10);
+}
+
+.h_line-dashed {
+    min-width: 30rem;
+    width: 40vw;
+    border-top: 1px dashed var(--theme-color-10);
+}
+
+
+a {
+    font-weight: bold;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    font-weight: 900;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin: 0;
+    font-weight: 600;
+}
+
+h4 {
+    display: block;
+    font-size: 1em;
+    margin: 0;
+    font-weight: 500;
+}
+
+h5 {
+    display: block;
+    font-size: .83em;
+    margin: 0;
+    font-weight: 500;
+}
+
+h6 {
+    display: block;
+    font-size: .67em;
+    margin: 0;
+    font-weight: 500;
+}
+
+.keyword {
+    color: var(--color-code-keyword-100);
+}
+
+.constant {
+    color: var(--color-code-constant-100);
+}
+
+.boolean {
+    color: var(--color-code-boolean-100);
+}
+
+.operator {
+    color: var(--color-code-operator-100);
+}
+
+.punctuation {
+    color: var(--color-code-punctuation-100);
+}
+
+.comment {
+    color: var(--color-code-comment-100);
+}
+
+.d-none {
+    display: none !important;
+}
+
+.scale-up {
+    transition: all 0.2s ease-in-out;
+}
+
+.scale-up:hover {
+    height: 101%;
+    width: 101%;
+}
+
+@media screen and (orientation: portrait) {
+
+    .h_line {
+        min-width: 0rem;
+        width: 90vw;
+        border-top: 1px solid var(--theme-color-10);
+    }
+
+    .h_line-dashed {
+        min-width: 0rem;
+        width: 90vw;
+        border-top: 1px dashed var(--theme-color-10);
+    }
+
+}
