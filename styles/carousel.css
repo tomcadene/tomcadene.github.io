@@ -1,0 +1,233 @@
+/* Carousel Container */
+.carousel {
+  width: 100%;
+  /* Full width */
+  height: 32rem;
+  /* Fixed height */
+  overflow: hidden;
+  position: relative;
+  /* For positioning navigation buttons */
+  display: flex;
+  /* Enable Flexbox */
+  flex-direction: column;
+  /* Stack children vertically */
+  gap: var(--gap-m);
+  aspect-ratio: 16 / 9;
+  /* Optional: Maintains aspect ratio */
+  margin: 0 auto;
+  /* Center the carousel */
+}
+
+/* Main Image Section */
+.carousel-main {
+  flex: 5;
+  /* 80% of the carousel's height */
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-m);
+}
+
+.carousel-main img.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures image covers the container without distortion */
+  display: block;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-s);
+  transition: background-color 0.1s;
+  opacity: 0.5;
+  z-index: 2;
+  /* Ensure buttons are above images */
+}
+
+.carousel-nav:hover,
+.carousel-nav:focus {
+  opacity: 1;
+}
+
+.carousel-nav.left {
+  left: 5%;
+  height: 24px;
+  width: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/images/left.png');
+}
+
+.carousel-nav.right {
+  right: 5%;
+  height: 24px;
+  width: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/images/right.png');
+}
+
+/* Thumbnails */
+.carousel-thumbnails {
+  flex: 1;
+  /* 20% of the carousel's height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-m);
+  overflow-x: auto;
+  /* Enable horizontal scrolling if needed */
+}
+
+.carousel-thumbnails img.carousel-thumb {
+  width: auto;
+  /* Allow width to adjust based on content */
+  height: 100%;
+  /* Fill the thumbnails container's height */
+  aspect-ratio: 16 / 9;
+  /* Optional: Maintains aspect ratio */
+  object-fit: cover;
+  /* Ensures images cover the container without distortion */
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.1s, border 0.1s;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-s);
+}
+
+.carousel-thumbnails img.carousel-thumb.active,
+.carousel-thumbnails img.carousel-thumb:hover {
+  opacity: 1;
+  border-color: var(--theme-color-70);
+}
+
+/* Scrollbar Styling (Optional) */
+.carousel-thumbnails::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-thumbnails::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.carousel-thumbnails::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius-s);
+}
+
+/* Responsive Design */
+@media screen and (orientation: portrait) {
+  .carousel {
+    height: 25rem;
+    /* Adjust height for smaller screens */
+    aspect-ratio: 4 / 3;
+    /* Optional: Adjust aspect ratio */
+  }
+
+  .carousel-nav {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+}
+
+/* New CSS for Modal */
+
+/* Modal Container */
+.image-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.image-modal .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Modal Caption */
+.image-modal .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* Close Button */
+.image-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+.image-modal .modal-close:hover,
+.image-modal .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Modal Navigation Buttons */
+.image-modal .modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.image-modal .modal-nav:hover,
+.image-modal .modal-nav:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal .modal-left {
+    left: 20px;
+}
+
+.image-modal .modal-right {
+    right: 20px;
+}
+
+/* Responsive Modal Navigation Buttons */
+@media screen and (max-width: 600px) {
+    .image-modal .modal-nav {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
