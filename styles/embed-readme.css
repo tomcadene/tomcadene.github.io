@@ -1,0 +1,125 @@
+/* Basic styling for the README container */
+#readme {
+    width: 100%;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    border: 1px solid var(--theme-color-00);
+}
+
+/* styles.css */
+
+/* Define light theme variables */
+:root[data-theme='light'] {
+    --bg-color: var(--theme-color-00);
+    --text-color: var(--theme-color-100);
+    --link-color: #0366d6;
+    --code-bg: var(--theme-color-05);
+    --border-color: #e1e4e8;
+}
+
+/* Define dark theme variables */
+:root[data-theme='dark'] {
+    --bg-color: var(--theme-color-l-00);
+    --text-color: var(--theme-color-100);
+    --link-color: #58a6ff;
+    --code-bg: var(--theme-color-05);
+    --border-color: #30363d;
+}
+
+/* Apply background and text colors */
+.markdown-body {
+    background-color: var(--theme-color-l-00);
+    color: var(--text-color);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: var(--border-radius-xl);
+}
+
+[data-theme='dark'] .markdown-body {
+    background-color: var(--theme-color-l-00);
+    color: var(--text-color);
+}
+
+/* Style links */
+.markdown-body a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+/* Style code blocks */
+.markdown-body pre {
+    background-color: var(--code-bg);
+    padding: var(--padding-s);
+    overflow: auto;
+    border-radius: var(--border-radius-m);
+}
+
+/* Style tables */
+.markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.markdown-body th, .markdown-body td {
+    border: 1px solid var(--border-color);
+    padding: var(--padding-s);
+    text-align: left;
+}
+
+.markdown-body th {
+    background-color: var(--code-bg);
+}
+
+
+/* Additional styles as needed */
+
+/* styles.css */
+
+/* Ensure images are responsive */
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+/* Make tables horizontally scrollable on small screens */
+.markdown-body table {
+    display: block;
+    overflow-x: auto;
+}
+
+/* Style blockquotes */
+.markdown-body blockquote {
+    border-left: 4px solid var(--border-color);
+    padding-left: var(--padding-s);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Style inline code */
+.markdown-body code {
+    background-color: var(--code-bg);
+    padding: var(--padding-s);
+    border-radius: var(--border-radius-m);
+}
+
+/* Style headings */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    color: var(--text-color);
+}
+
+.markdown-body h1, .markdown-body h2 {
+    border-bottom: 1px solid var(--theme-color-20);
+}
+
+.markdown-body ol, .markdown-body ul {
+    padding: 0;
+}
