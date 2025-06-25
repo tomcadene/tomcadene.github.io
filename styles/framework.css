@@ -109,7 +109,7 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-    --theme-color-bg: rgb(10, 15, 20);
+    --theme-color-bg: rgba(10, 15, 20, 1);
     --theme-color-r: 255;
     --theme-color-g: 255;
     --theme-color-b: 250;
