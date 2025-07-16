@@ -73,6 +73,14 @@
     background-color: var(--code-bg);
 }
 
+.markdown-body table tr {
+    background-color: var(--theme-color-l-00);
+
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: var(--code-bg);
+}
 
 /* Additional styles as needed */
 
