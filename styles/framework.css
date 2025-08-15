@@ -8,12 +8,12 @@
     --theme-color-r: 0;
     --theme-color-g: 0;
     --theme-color-b: 0;
-    --theme-color-r-l: 255;
-    --theme-color-g-l: 255;
-    --theme-color-b-l: 250;
-    --theme-color-r-d: 0;
-    --theme-color-g-d: 0;
-    --theme-color-b-d: 0;
+    --theme-color-r-l: 250;
+    --theme-color-g-l: 250;
+    --theme-color-b-l: 245;
+    --theme-color-r-d: 10;
+    --theme-color-g-d: 15;
+    --theme-color-b-d: 20;
 
     --theme-color-100: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-100));
     --theme-color-90: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), var(--opacity-90));
@@ -88,6 +88,7 @@
     --padding-xl: 1.5rem;
     --padding-xxl: 2rem;
 
+    --border-radius-0: 0rem;
     --border-radius-s: 0.25rem;
     --border-radius-m: 0.5rem;
     --border-radius-l: 1rem;
