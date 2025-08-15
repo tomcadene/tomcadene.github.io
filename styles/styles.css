@@ -380,6 +380,22 @@ nav {
     opacity: 0.25;
 }
 
+/* Style for all hover targets */
+.hover-target {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Floating image styling */
+#cursorImage {
+    position: fixed; /* Keeps position relative to viewport */
+    pointer-events: none; /* So it doesn’t block hovering */
+    display: none; /* Hidden until hover */
+    width: 800px;
+    border-radius: var(--border-radius-m);
+    height: auto;
+    z-index: 9999;
+}
 
 .bg {
     height: 100%;
