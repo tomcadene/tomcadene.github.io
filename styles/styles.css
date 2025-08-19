@@ -391,7 +391,7 @@ nav {
     position: fixed; /* Keeps position relative to viewport */
     pointer-events: none; /* So it doesn’t block hovering */
     display: none; /* Hidden until hover */
-    width: 600px;
+    width: 500px;
     border-radius: var(--border-radius-m);
     height: auto;
     z-index: 9999;
