@@ -1,10 +1,10 @@
 /* Default light theme */
 :root {
-    --theme-color-bg: rgb(250, 250, 245);
-    --theme-color-project: rgba(250, 250, 245, 1);
-    --theme-color-project-hover: rgba(255, 255, 250, 1);
+    --theme-color-bg: rgb(240, 240, 235);
+    --theme-color-project: rgba(240, 240, 235, 1);
+    --theme-color-project-hover: rgba(245, 245, 240, 1);
     --theme-color-project-soon: rgba(0, 0, 0, 0.05);
-    --theme-color-project-beta: rgba(255, 255, 250, 0.5);
+    --theme-color-project-beta: rgba(245, 245, 240, 0.5);
     --theme-color-r: 0;
     --theme-color-g: 0;
     --theme-color-b: 0;
