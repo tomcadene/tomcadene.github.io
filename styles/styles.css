@@ -330,13 +330,12 @@ nav {
     height: 100%;
     width: 100%;
     height: 15rem;
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-m);
+    gap: var(--gap-l);
     align-items: stretch;
     justify-content: space-between;
-    padding: var(--padding-xxl);
+    padding: var(--padding-l);
     outline: 1px solid var(--theme-color-05);
     border: 0px solid var(--theme-color-l-100);
     border-radius: var(--border-radius-m);
@@ -350,7 +349,7 @@ nav {
     background-position: center;
     background-clip: border-box;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 [data-theme="dark"] .project {
@@ -359,56 +358,39 @@ nav {
 }
 
 [data-theme="dark"] .project:hover {
-    background-color: var(--theme-color-00);
+    background-color: var(--theme-color-05);
 }
 
 .project:hover {
-    background-color: var(--theme-color-l-00);
+    background-color: var(--theme-color-l-50);
 }
 
 .project-title-and-description {
-    height: 100%;
-    width: 100%;
+    flex: none;
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
-    align-items: stretch;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
-.project:hover .bg {
-    opacity: 0.25;
-}
-
-/* Style for all hover targets */
-.hover-target {
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* Floating image styling */
-#cursorImage {
-    position: fixed; /* Keeps position relative to viewport */
-    pointer-events: none; /* So it doesn’t block hovering */
-    display: none; /* Hidden until hover */
-    width: 500px;
-    border-radius: var(--border-radius-m);
-    height: auto;
-    z-index: 9999;
+.project-title h2 {
+    font-size: 1rem;
 }
 
 .bg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex: 1;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
     background-clip: border-box;
-    opacity: 0;
+    border-radius: var(--border-radius-s);
+    opacity: 0.85;
     transition: all 0.1s ease-in-out;
+}
+
+.project:hover .bg {
+    opacity: 1;
 }
 
 .project-title {
@@ -458,27 +440,27 @@ nav {
     background-image: url('/images/apple-artist-palette-64.png');
 }
 
-.find-unused-javascript-files {
+.find-unused-javascript-files .bg {
     background-image: url('/images/find_unused_javascript_files.png');
 }
 
-.find-unused-css-files {
+.find-unused-css-files .bg {
     background-image: url('/images/find_unused_css_files.png');
 }
 
-.discord-navigator {
+.discord-navigator .bg {
     background-image: url('/images/discord_navigator_2.png');
 }
 
-.poe {
+.poe .bg {
     background-image: url('/images/poe.jpg');
 }
 
-.rre {
+.rre .bg {
     background-image: url('/images/rre.jpg');
 }
 
-.rr {
+.rr .bg {
     background-image: url('/images/rr.png');
 }
 
@@ -486,36 +468,8 @@ nav {
     background-image: url('/images/vv.png');
 }
 
-.pp {
+.pp .bg {
     background-image: url('/images/pp.png');
-}
-
-.project-find-unused-javascript-files .bg {
-    background-image: url('/images/bg1.jpg');
-}
-
-.project-find-unused-javascript-files .bg {
-    background-image: url('/images/bg2.jpg');
-}
-
-.project-find-unused-css-files .bg {
-    background-image: url('/images/bg3.jpg');
-}
-
-.project-discord-navigator .bg {
-    background-image: url('/images/bg4.jpg');
-}
-
-.project-poe .bg {
-    background-image: url('/images/bg5.jpg');
-}
-
-.project-rre .bg {
-    background-image: url('/images/bg6.jpg');
-}
-
-.project-pp .bg {
-    background-image: url('/images/bg7.jpg');
 }
 
 .title-and-topics {
@@ -548,13 +502,18 @@ nav {
 .javascript {
     height: 1rem;
     aspect-ratio: 1 / 1;
-    background-color: rgb(255, 235, 55);
-    border: 1px solid var(--theme-color-05);
-    border-radius: var(--border-radius-m);
+    background-color: rgba(63, 122, 171, 0);
+    border: 1px solid var(--theme-color-0);
+    border-radius: var(--border-radius-s);
+    background-image: url('/images/javascript.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
 }
 
 .threejs {
-    height: 1rem;
+    height: 0.5rem;
     aspect-ratio: 1 / 1;
     background-color: rgb(36, 36, 36);
     border: 1px solid var(--theme-color-05);
@@ -564,9 +523,14 @@ nav {
 .python {
     height: 1rem;
     aspect-ratio: 1 / 1;
-    background-color: rgb(63, 123, 171);
-    border: 1px solid var(--theme-color-05);
-    border-radius: var(--border-radius-m);
+    background-color: rgba(63, 122, 171, 0);
+    border: 1px solid var(--theme-color-0);
+    border-radius: var(--border-radius-s);
+    background-image: url('/images/python.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
 }
 
 .projects-github {
