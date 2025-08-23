@@ -82,11 +82,6 @@
     background-color: var(--code-bg);
 }
 
-/* Additional styles as needed */
-
-/* styles.css */
-
-/* Ensure images are responsive */
 .markdown-body img {
     max-width: 100%;
     height: auto;
