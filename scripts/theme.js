@@ -7,23 +7,18 @@
 const LIGHT_THEME   = 'light';                 // Light-mode key
 const DARK_THEME    = 'dark';                  // Dark-mode key
 const THEME_KEY     = 'theme';                 // localStorage key
-const CONSENT_KEY   = 'cookie_consent';        // localStorage key for GDPR banner
 
-/* ---------- HELPER: save to storage (only if consent) ---------- */
+/* ---------- HELPER: save to storage ---------- */
 function saveTheme(theme) {
-    const consent = localStorage.getItem(CONSENT_KEY);
-    if (consent === 'accepted') {
-        localStorage.setItem(THEME_KEY, theme);          // Persist only with consent
-        console.log('[Theme] Saved to localStorage:', theme);
-    } else {
-        console.log('[Theme] Not saved (no consent):', theme);
-    }
+    // Always save the theme preference
+    localStorage.setItem(THEME_KEY, theme);          
+    console.log('[Theme] Saved to localStorage:', theme);
 }
 
 /* ---------- CORE: Apply the theme ---------- */
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme); // Change <html> attribute
-    saveTheme(theme);                                           // Try to persist the choice
+    saveTheme(theme);                                           // Persist the choice
     console.log('[Theme] Applied:', theme);
 }
 
@@ -36,13 +31,13 @@ function toggleTheme() {
 
 /* ---------- INITIALISE: Always default to dark if no saved preference ---------- */
 function initializeTheme() {
-    // 1. Try saved preference (requires consent) ------------------------
+    // 1. Try saved preference ------------------------
     const savedTheme = localStorage.getItem(THEME_KEY);
 
-    // 2. Default to dark if no saved theme ------------------------------
+    // 2. Default to dark if no saved theme ----------------
     const initialTheme = savedTheme || DARK_THEME;
 
-    // 3. Apply the chosen theme -----------------------------------------
+    // 3. Apply the chosen theme -------------------------
     setTheme(initialTheme);
 }
 
@@ -57,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('[Theme] No toggle button found');
     }
 
-    /* Always set an initial theme – even before cookie consent.
-       Persistence will happen later if/when the user consents. */
+    /* Always set an initial theme */
     initializeTheme();
 });
