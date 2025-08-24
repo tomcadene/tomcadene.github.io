@@ -239,18 +239,12 @@ nav {
 }
 
 .newThemeButton {
-    height: 100%;
+    height: 2rem;
     aspect-ratio: 1 / 1;
-    background-color: var(--theme-color-l-00);
-    border-radius: var(--border-radius-xxl);
     background-image: url('/images/sun.svg');
-    background-size: 50%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    padding: var(--padding-xl);
-    outline: 1px solid var(--theme-color-d-00);
-    border-top: 1px solid var(--theme-color-l-00);
-    border-bottom: 1px solid var(--theme-color-d-00);
     transition: all 0.1s ease-in-out;
     opacity: 0.5;
 }
@@ -341,7 +335,7 @@ nav {
     border-radius: var(--border-radius-m);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-    background-color: var(--theme-color-l-00);
+    background-color: var(--theme-color-l-50);
     backdrop-filter: blur(10px);
     backface-visibility: hidden;
     background-size: 100% auto;
@@ -353,16 +347,16 @@ nav {
 }
 
 [data-theme="dark"] .project {
-    background-color: var(--theme-color-l-00);
-    border: 0px solid var(--theme-color-d-100);
+    background-color: var(--theme-color-l-05);
+    outline: 1px solid var(--theme-color-l-10);
 }
 
 [data-theme="dark"] .project:hover {
-    background-color: var(--theme-color-05);
+    background-color: var(--theme-color-10);
 }
 
 .project:hover {
-    background-color: var(--theme-color-l-50);
+    background-color: var(--theme-color-l-100);
 }
 
 .project-title-and-description {
@@ -648,6 +642,15 @@ footer {
         width: 90vw;
     }
 
+    .whatsnew {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-s);
+        font-size: var(--font-size-xxxl);
+        font-weight: bold;
+        position: relative;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -696,12 +699,6 @@ footer {
 
     .projects-row {
         flex-direction: column;
-    }
-
-    .project {
-        min-height: 0rem;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .project-left {
