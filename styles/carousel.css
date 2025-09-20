@@ -55,13 +55,13 @@
 
 .carousel-nav.left {
   left: 5%;
-  background-image: url('/images/left.png');
+  background-image: url('/images/left.svg');
   /* image for left */
 }
 
 .carousel-nav.right {
   right: 5%;
-  background-image: url('/images/right.png');
+  background-image: url('/images/right.svg');
   /* image for right */
 }
 
@@ -198,12 +198,12 @@
 
 .image-modal .modal-left {
   left: 20px;
-  background-image: url('/images/left.png');
+  background-image: url('/images/left.svg');
 }
 
 .image-modal .modal-right {
   right: 20px;
-  background-image: url('/images/right.png');
+  background-image: url('/images/right.svg');
 }
 
 /* Responsive Modal Arrows */
