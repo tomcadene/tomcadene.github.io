@@ -45,7 +45,8 @@
         </div>
         <div class="project_header-title_and_description">
             <h1 class="project_header-title">Find unused css files</h1>
-            <div class="project_header-description">Command-line helper that keeps your web projects tidy by spotting unused css files.
+            <div class="project_header-description">Command-line helper that keeps your web projects tidy by spotting
+                unused css files.
             </div>
         </div>
         <div class="links">
@@ -59,31 +60,41 @@
             <div class="topic js">
             </div>
         </div>
-        <!-- Existing Carousel HTML -->
+        <!-- Place this where your carousel lives -->
         <div class="carousel" data-autoplay="true" data-interval="3000">
             <div class="carousel-main">
+                <!-- Left arrow uses background image via CSS -->
                 <button class="carousel-nav left" aria-label="Previous Image" aria-controls="carousel-image"
                     aria-expanded="false"></button>
-                <img class="carousel-image" src="/images/find_unused_css_files.png" alt="Carousel Image 1" aria-live="polite"
-                    loading="lazy">
+
+                <!-- Main image -->
+                <img class="carousel-image" id="carousel-image" src="/images/find_unused_css_files.png"
+                    alt="Carousel Image 1" aria-live="polite" loading="lazy">
+
+                <!-- Right arrow uses background image via CSS -->
                 <button class="carousel-nav right" aria-label="Next Image" aria-controls="carousel-image"
                     aria-expanded="false"></button>
             </div>
+
             <div class="carousel-thumbnails">
-                <img class="carousel-thumb active" src="/images/find_unused_css_files.png" alt="Thumbnail 1" data-index="0"
-                    data-full="/images/find_unused_css_files.png" loading="lazy">
+                <img class="carousel-thumb active" src="/images/find_unused_css_files.png" alt="Thumbnail 1"
+                    data-index="0" data-full="/images/find_unused_css_files.png" loading="lazy">
                 <!-- Add more thumbnails as needed -->
             </div>
         </div>
 
-        <!-- Updated Modal Structure for Full-Size Image with Navigation -->
-        <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption"
-            aria-hidden="true">
+        <!-- Add this modal markup once near the end of <body> -->
+        <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-caption">
+            <!-- Close button (kept as text “×”; not a nav arrow) -->
             <span class="modal-close" aria-label="Close">&times;</span>
-            <button class="modal-nav modal-left" aria-label="Previous Image">&lt;</button>
-            <img class="modal-content" id="modal-image" alt="Full Size Image">
-            <button class="modal-nav modal-right" aria-label="Next Image">&gt;</button>
-            <div id="modal-caption" class="modal-caption">Carousel Image 1</div>
+
+            <!-- Modal navigation arrows using image backgrounds via CSS -->
+            <button class="modal-nav modal-left" aria-label="Previous Image"></button>
+            <button class="modal-nav modal-right" aria-label="Next Image"></button>
+
+            <!-- Full-size image and caption -->
+            <img class="modal-content" id="modal-image" alt="">
+            <div class="modal-caption" id="modal-caption"></div>
         </div>
 
 
@@ -95,13 +106,15 @@
         <div class="h_line-dashed"></div>
         <div class="next">
             <h2>Next: Most recent project</h2>
-            <a class="project project-find-unused-javascript-files gradient-hover" href="/projects/find-unused-javascript-files.html">
+            <a class="project project-find-unused-javascript-files gradient-hover"
+                href="/projects/find-unused-javascript-files.html">
                 <div class="project-left">
                     <div class="project-img find-unused-javascript-files"></div>
                 </div>
                 <div class="project-right">
                     <div class="project-title">
-                        <p class="">Find unused Javascript files<span class="description"> Command-line helper that keeps your web projects tidy by spotting unused javascript files.</span></p>
+                        <p class="">Find unused Javascript files<span class="description"> Command-line helper that
+                                keeps your web projects tidy by spotting unused javascript files.</span></p>
                     </div>
                     <!-- 
                     <p class="">Implementing 'Bionic Reading', bolding word parts to enhance readability.
