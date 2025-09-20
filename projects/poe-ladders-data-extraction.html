@@ -60,35 +60,45 @@
             <div class="topic js">
             </div>
         </div>
-        <!-- Existing Carousel HTML -->
+
+        <!-- Place this where your carousel lives -->
         <div class="carousel" data-autoplay="true" data-interval="3000">
             <div class="carousel-main">
+                <!-- Left arrow uses background image via CSS -->
                 <button class="carousel-nav left" aria-label="Previous Image" aria-controls="carousel-image"
                     aria-expanded="false"></button>
-                <img class="carousel-image" src="/images/poe.jpg" alt="Carousel Image 1" aria-live="polite"
-                    loading="lazy">
+
+                <!-- Main image -->
+                <img class="carousel-image" id="carousel-image" src="/images/poe.jpg"
+                    alt="Carousel Image 1" aria-live="polite" loading="lazy">
+
+                <!-- Right arrow uses background image via CSS -->
                 <button class="carousel-nav right" aria-label="Next Image" aria-controls="carousel-image"
                     aria-expanded="false"></button>
             </div>
+
             <div class="carousel-thumbnails">
-                <img class="carousel-thumb active" src="/images/poe.jpg" alt="Thumbnail 1" data-index="0"
-                    data-full="/images/poe.jpg" loading="lazy">
+                <img class="carousel-thumb active" src="/images/poe.jpg" alt="Thumbnail 1"
+                    data-index="0" data-full="/images/poe.png" loading="lazy">
                 <img class="carousel-thumb" src="/images/poe2.jpg" alt="Thumbnail 2" data-index="1"
-                    data-full="/images/poe2.jpg" loading="lazy">
+                    data-full="/images/poe2.png" loading="lazy">
                 <!-- Add more thumbnails as needed -->
             </div>
         </div>
 
-        <!-- Updated Modal Structure for Full-Size Image with Navigation -->
-        <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption"
-            aria-hidden="true">
+        <!-- Add this modal markup once near the end of <body> -->
+        <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-caption">
+            <!-- Close button (kept as text “×”; not a nav arrow) -->
             <span class="modal-close" aria-label="Close">&times;</span>
-            <button class="modal-nav modal-left" aria-label="Previous Image">&lt;</button>
-            <img class="modal-content" id="modal-image" alt="Full Size Image">
-            <button class="modal-nav modal-right" aria-label="Next Image">&gt;</button>
-            <div id="modal-caption" class="modal-caption">Carousel Image 1</div>
-        </div>
 
+            <!-- Modal navigation arrows using image backgrounds via CSS -->
+            <button class="modal-nav modal-left" aria-label="Previous Image"></button>
+            <button class="modal-nav modal-right" aria-label="Next Image"></button>
+
+            <!-- Full-size image and caption -->
+            <img class="modal-content" id="modal-image" alt="">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
 
 
     </header>
@@ -104,7 +114,8 @@
                 </div>
                 <div class="project-right">
                     <div class="project-title">
-                        <p class="">Discord Navigator<span class="description"> Chrome extension that let you search and find Discord servers you've joined.</span></p>
+                        <p class="">Discord Navigator<span class="description"> Chrome extension that let you search and
+                                find Discord servers you've joined.</span></p>
                     </div>
                     <!-- 
                     <p class="">Implementing 'Bionic Reading', bolding word parts to enhance readability.
