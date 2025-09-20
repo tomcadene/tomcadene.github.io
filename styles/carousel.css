@@ -131,14 +131,18 @@
 /* Modal Image */
 .image-modal .modal-content {
   display: block;
-  margin: auto;
+  margin: 0;
   max-width: 90%;
   max-height: 80%;
   border-radius: var(--border-radius-m);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 
 /* Modal Caption */
 .image-modal .modal-caption {
