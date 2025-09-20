@@ -43,16 +43,16 @@ class Carousel {
     init() {
         // Set initial image and active thumbnail
         this.updateMainImage(this.currentIndex, false);              // Set first image without announcing
-        logEvent("Initialized with images", this.images);            // Log images loaded
+
 
         // Button listeners
         this.leftNav.addEventListener('click', () => {               // When left arrow is clicked
-            logEvent("Left arrow clicked");                            // Log the click
+
             this.prevImage();                                          // Go to previous image
             this.resetAutoplay();                                      // Reset autoplay timer
         });
         this.rightNav.addEventListener('click', () => {              // When right arrow is clicked
-            logEvent("Right arrow clicked");                           // Log the click
+
             this.nextImage();                                          // Go to next image
             this.resetAutoplay();                                      // Reset autoplay timer
         });
@@ -98,7 +98,7 @@ class Carousel {
         this.mainImage.alt = `Carousel Image ${index + 1}`;          // Set accessible alt
         this.currentIndex = index;                                   // Save index
         this.updateActiveThumbnail();                                 // Update active thumb
-        logEvent("Image changed", { index });                        // Log change
+
 
         // Announce politely for screen readers
         if (announce) this.carousel.setAttribute('aria-live', 'polite'); // Set aria-live
@@ -127,7 +127,7 @@ class Carousel {
         this.timer = setInterval(() => {                             // Create interval
             this.nextImage();                                          // Advance image
         }, this.interval);                                           // Use configured interval
-        logEvent("Autoplay started", { interval: this.interval });   // Log start
+
     }
 
     stopAutoplay() {
@@ -135,7 +135,7 @@ class Carousel {
         if (this.timer) {                                            // If timer exists
             clearInterval(this.timer);                                 // Clear interval
             this.timer = null;                                         // Reset ref
-            logEvent("Autoplay stopped");                              // Log stop
+
         }
     }
 
@@ -151,7 +151,7 @@ class Carousel {
         // Jump to clicked thumbnail index
         const index = parseInt(e.target.getAttribute('data-index')); // Get index from data
         if (!isNaN(index)) {                                         // If valid number
-            logEvent("Thumbnail clicked", { index });                  // Log click
+
             this.updateMainImage(index);                               // Update image
             this.resetAutoplay();                                      // Reset autoplay
         }
@@ -206,7 +206,7 @@ class Carousel {
         modalImg.alt = this.mainImage.alt;                           // Set image alt
         captionText.innerHTML = this.mainImage.alt || `Carousel Image ${this.currentIndex + 1}`; // Set caption
         document.body.style.overflow = 'hidden';                     // Prevent body scroll
-        logEvent("Modal opened", { index: this.currentIndex });      // Log open
+
 
         const closeBtn = modal.querySelector('.modal-close');        // Close button
         const modalPrev = modal.querySelector('.modal-left');        // Modal left arrow
@@ -228,7 +228,7 @@ class Carousel {
         modal.style.display = 'none';                                // Hide modal
         modal.setAttribute('aria-hidden', 'true');                   // Update aria
         document.body.style.overflow = '';                           // Restore scroll
-        logEvent("Modal closed");                                    // Log close
+
 
         const closeBtn = modal.querySelector('.modal-close');        // Close button
         const modalPrev = modal.querySelector('.modal-left');        // Modal left arrow
@@ -254,14 +254,14 @@ class Carousel {
     handleModalPrev(e) {
         // Navigate previous inside modal
         e.stopPropagation();                                         // Prevent bubbling
-        logEvent("Modal left arrow clicked");                        // Log click
+
         this.prevImage();                                            // Go previous
     }
 
     handleModalNext(e) {
         // Navigate next inside modal
         e.stopPropagation();                                         // Prevent bubbling
-        logEvent("Modal right arrow clicked");                       // Log click
+
         this.nextImage();                                            // Go next
     }
 
@@ -292,5 +292,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Find all carousels and instantiate
     const carousels = document.querySelectorAll('.carousel');      // All carousel roots
     carousels.forEach(el => { new Carousel(el); });                // Create a Carousel for each
-    logEvent("All carousels initialized", { count: carousels.length }); // Log count
+
 });
