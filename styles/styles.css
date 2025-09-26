@@ -161,7 +161,8 @@ nav {
     z-index: 100;
 }
 
-nav a, .newThemeButton {
+nav a,
+.newThemeButton {
     background-color: var(--theme-color-10);
 }
 
@@ -618,6 +619,7 @@ footer {
         padding: var(--padding-xl);
     }
 
+    nav,
     header,
     main,
     footer {
@@ -625,11 +627,15 @@ footer {
         width: 100%;
     }
 
-    main {
-        gap: var(--gap-l);
+    .nav-links {
+        width: 100%;
+    }
+    
+    nav a {
+        width: 100%;
     }
 
-    nav {
+    main {
         gap: var(--gap-l);
     }
 
