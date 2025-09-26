@@ -1,16 +1,16 @@
 /* Default light theme */
 :root {
-    --theme-color-bg: rgb(240, 240, 235);
-    --theme-color-project: rgba(240, 240, 235, 1);
-    --theme-color-project-hover: rgba(245, 245, 240, 1);
+    --theme-color-bg: rgb(240, 238, 230);
+    --theme-color-project: rgba(245, 243, 235, 1);
+    --theme-color-project-hover: rgba(250, 248, 240, 1);
     --theme-color-project-soon: rgba(0, 0, 0, 0.05);
-    --theme-color-project-beta: rgba(245, 245, 240, 0.5);
+    --theme-color-project-beta: rgba(245, 243, 235, 0.5);
     --theme-color-r: 0;
     --theme-color-g: 0;
     --theme-color-b: 0;
     --theme-color-r-l: 250;
-    --theme-color-g-l: 250;
-    --theme-color-b-l: 245;
+    --theme-color-g-l: 248;
+    --theme-color-b-l: 240;
     --theme-color-r-d: 10;
     --theme-color-g-d: 15;
     --theme-color-b-d: 20;
