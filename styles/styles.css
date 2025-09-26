@@ -37,25 +37,20 @@ span {
 }
 
 h1,
-h2 {
+h2,
+nav div {
     padding: 0;
     margin: 0;
     font-family: "Inter", Arial, Helvetica, sans-serif;
-    color: var(--theme-color-100);
 }
 
 body,
 button,
-div,
 p,
+div,
 span {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-family: monospace, "Inter", Arial, Helvetica, sans-serif;
     font-weight: 500;
-    color: var(--theme-color-100);
-}
-
-p {
-    color: var(--theme-color-90);
 }
 
 button {
@@ -79,7 +74,7 @@ body {
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    gap: var(--gap-xxl);
+    gap: var(--gap-xl);
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -114,7 +109,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: var(--gap-xxl);
+    gap: var(--gap-xl);
     padding: var(--padding-0);
     background-color: rgba(225, 227, 223, 0);
     border-radius: var(--border-radius-l);
@@ -129,12 +124,13 @@ div {
     text-decoration: none;
 }
 
-a {
+.a_external {
     color: rgb(55, 128, 255);
+    text-decoration: underline rgba(55, 128, 255, 1);
     transition: all 0.1s ease-in-out;
 }
 
-a:hover {
+.a_external:hover {
     color: rgba(35, 108, 235, 1);
 }
 
@@ -158,7 +154,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: var(--gap-s);
-    border-radius: var(--border-radius-xxxl);
+    border-radius: var(--border-radius-0);
     border: 1px solid var(--theme-color-05);
     padding: var(--padding-s);
     backdrop-filter: blur(0px);
@@ -167,17 +163,14 @@ nav {
 
 nav a, .newThemeButton {
     background-color: var(--theme-color-10);
-    border-radius: var(--border-radius-xxxl);
 }
 
 nav a {
     padding: var(--padding-l) var(--padding-xl);
-    border-radius: var(--border-radius-xxxl) var(--border-radius-l) var(--border-radius-l) var(--border-radius-xxxl);
 }
 
 .newThemeButton {
     padding: var(--padding-l);
-    border-radius: var(--border-radius-l) var(--border-radius-xxxl) var(--border-radius-xxxl) var(--border-radius-l);
 }
 
 .nav-links {
@@ -260,7 +253,7 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--gap-xxl);
+    gap: var(--gap-xl);
     text-decoration: none;
 }
 
@@ -268,8 +261,10 @@ nav a {
     display: flex;
     flex-direction: row;
     gap: var(--gap-s);
-    font-size: var(--font-size-xxxxxl);
-    font-weight: bold;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-xxxl);
+    font-weight: normal;
+    letter-spacing: -0.04em;
     position: relative;
 }
 
@@ -307,7 +302,7 @@ nav a {
     padding: var(--padding-l);
     outline: 1px solid var(--theme-color-05);
     border: 0px solid var(--theme-color-l-100);
-    border-radius: var(--border-radius-m);
+    border-radius: var(--border-radius-0);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     background-color: var(--theme-color-l-50);
@@ -319,6 +314,7 @@ nav a {
     background-clip: border-box;
     overflow: hidden;
     transition: all 0.1s ease-in-out;
+    opacity: 0.9;
 }
 
 [data-theme="dark"] .project {
@@ -332,6 +328,7 @@ nav a {
 
 .project:hover {
     background-color: var(--theme-color-l-100);
+    opacity: 1;
 }
 
 .project-title-and-description {
@@ -353,13 +350,8 @@ nav a {
     background-repeat: no-repeat;
     background-position: center;
     background-clip: border-box;
-    border-radius: var(--border-radius-s);
-    opacity: 0.85;
+    border-radius: var(--border-radius-0);
     transition: all 0.1s ease-in-out;
-}
-
-.project:hover .bg {
-    opacity: 1;
 }
 
 .project-title {
@@ -508,20 +500,6 @@ nav a {
     align-items: center;
     justify-content: center;
     gap: var(--gap-m);
-    text-decoration: underline rgba(55, 128, 255, 1);
-    color: rgba(55, 128, 255, 1);
-}
-
-.projects-github p {
-    color: rgba(55, 128, 255, 1);
-}
-
-.projects-github:hover {
-    text-decoration: underline rgb(44, 104, 207);
-}
-
-.projects-github:hover p {
-    color: rgba(44, 104, 207, 1);
 }
 
 .github {
