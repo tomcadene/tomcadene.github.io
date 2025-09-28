@@ -301,8 +301,8 @@ nav a {
     align-items: stretch;
     justify-content: space-between;
     padding: var(--padding-l);
-    outline: 1px solid var(--theme-color-05);
-    border: 0px solid var(--theme-color-l-100);
+    outline: 1px solid var(--theme-color-d-05);
+    border: 1px solid var(--theme-color-l-100);
     border-radius: var(--border-radius-0);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -320,7 +320,8 @@ nav a {
 
 [data-theme="dark"] .project {
     background-color: var(--theme-color-l-05);
-    outline: 1px solid var(--theme-color-l-10);
+    outline: 1px solid var(--theme-color-d-50);
+    border: 1px solid var(--theme-color-05);
 }
 
 [data-theme="dark"] .project:hover {
